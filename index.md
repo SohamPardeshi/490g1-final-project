@@ -8,7 +8,7 @@ Unfortunately, book covers don't make for good input to machine learning models.
 ### Problem Statement
 Given 256x256 colored images of book covers and a string representing the title of the book, predict which of 22 categories a book falls under in Audible.
 
-**Note:** For convenience, this is multi-class classification NOT multi-label classification. Each book can only have one category. To handle cases where there are many, we keep only a book's alphabetically last category.
+**Note:** For convenience, this is multi-class classification NOT multi-label classification. Each book can only have one category. To handle cases where a book fits in many categories, we simply choose the book's alphabetically last category.
 
 ### Related Work
 I produced my own dataset by scraping images and title text from Audible using [a simple Python notebook](https://colab.research.google.com/drive/1CjkhO3SELTK_KpOblS4pAcoaqMuzP1gC?usp=sharing).
