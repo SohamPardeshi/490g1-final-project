@@ -12,9 +12,9 @@ Note: This is multi-class classification NOT multi-label classification, so each
 
 ### Related Work
 Related work - what papers/ideas inspired you, what datasets did you use, etc
-```markdown
+
 ![Image](10.jpg)
-```
+
 
 ### Methodology
 Methodology - what is your approach/solution/what did you do?
