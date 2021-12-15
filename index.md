@@ -5,6 +5,7 @@ The well-known famous English idiom "you should never judge a book by its cover"
 
 Unfortunately, book covers don't make for good input to machine learning models. Book cover images vary too much in shape and size, while text on the cover (e.g. the title or author) can use uniquely different fonts. In comes Audible, an online audiobook and podcast streaming service. Audible helps match authors to professional narrators in order to convert books into audiobooks. During this process, they hire artists to modify book cover art into a square form. By scraping 11,958 modified book covers and title text from Audible, we have created a dataset that we hope to use to "judge a book by its cover".
 
+### Video
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/aee68385b401431494e32500c27c40e3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Problem Statement
@@ -39,6 +40,3 @@ Results - How well did you do
 
 ### Examples
 Examples - images/text/live demo, anything to show off your work (note, demos get some extra credit in the rubric)
-
-### Video
-
