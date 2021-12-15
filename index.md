@@ -72,10 +72,14 @@ Combining these resulted in a model that I ran hyperparameter searh over. The be
 where M is the number of output channels, k is the kernel size, and N is the pool size. Retraining this model on both the test set and the validation set resulted in an overall test accuracy of 33.958%.
 
 ### Examples
-Examples - images/text/live demo, anything to show off your work (note, demos get some extra credit in the rubric)
+To use the demo, you'll need to follow these steps:
+
+1. You'll need access to the dataset in order to use the notebook. Add a copy or a link of the public Google Driver folder in your "My Drive" (i.e. the root folder) of the email you are using. [Audible Dataset Folder](https://drive.google.com/drive/folders/19H5GsRGsLvwm350dbMAYuPO3_JWwijDu?usp=sharing)
+2. Now, simply run the demo! You can access it here: [https://colab.research.google.com/drive/1QNwIC_1pvyY7X-FMYfB5Tsg0Wc6U7L5u?usp=sharing](https://colab.research.google.com/drive/1QNwIC_1pvyY7X-FMYfB5Tsg0Wc6U7L5u?usp=sharing)
+
+
+### Project Links
+To see all of the work in my projects, you can view these notebooks and slides.
 - [Presentation Slides](https://docs.google.com/presentation/d/1K6__rhH25OgbwqZvlMlfX75R-YHsyYvxKiPKS7OOMAI/edit?usp=sharing)
 - [Dataset Downloader](https://colab.research.google.com/drive/1CjkhO3SELTK_KpOblS4pAcoaqMuzP1gC?usp=sharing)
 - [Project Notebook](https://colab.research.google.com/drive/1E1GKQjZ1hweY2ZTR4AzIuwKaTHbdjhCD?usp=sharing)
-
-Here are 5 random predictions for the model:
-
