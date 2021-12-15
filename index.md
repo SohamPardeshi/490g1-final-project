@@ -32,11 +32,50 @@ Once I found my preferred models for working with the image and text data indepe
 
 ### Experiments/Evaluation
 Experiments/evaluation - how are you evaluating your results
+I split the dataset into training (60%), validation (20%), and test (20%) to run experiments. I chose the best performing architecture on the validation set, ran hyperparameter search, and then trained a final model on the training + validation sets and test it on the test set.
 
+*Only images*:
+| Model Name | Training Accuracy | Validation Accuracy |
+|-------|--------|---------|
+| Simple Convolution | 21.98% | 22.56% |
+| 1 Full Convolution Layer | 28.77% | 26.03% |
+| 2 Full Convolution Layer | 30.04% | 26.11% |
+
+Here, full convolution layer includes dropout, maxpool, and batch norm. Although 2 Full Convolution layers performed better, the difference with 1 full convolution layer was negligible and it took WAY more time to run.
+
+*Only text*
+| Model Name | Training Accuracy | Validation Accuracy |
+|-------|--------|---------|
+| RNN | 14.28% | 15.17% |
+| LSTM | 14.50% | 14.23% |
+| BERT | 28.49% | 25.91% |
+| BERT for Sequence Generation | 28.38% | 26.03% |
+
+I think there was relatively no difference between LSTM and RNN because the sentences were short and relied less on context. BERT somehow blew these out of the water, but I'm not immediately sure why other than BERT is trained on a lot of data. 
+
+I ended up combining 1 Full Convolution Layer (good performance + speed) with BERT for Sequence Generation.
 
 ### Results
-Results - How well did you do
+Combining these resulted in a model that I ran hyperparameter searh over. The best search netted the following:
 
+'lr': , 'momentum': , 'weight_decay': , 'step_size': 13, 'M': 70, 'k': 7, 'N': 14}
+
+| Parameter | Value |
+|-------|--------|
+| LR | 0.0009222003494347612 |
+| Momentum | 0.037071920931339264 |
+| Weight Decay | 2.3331490406026315e-06 |
+| M | 70 | 
+| k | 7 | 
+| N | 14 | 
+
+where M is the number of output channels, k is the kernel size, and N is the pool size. Retraining this model on both the test set and the validation set resulted in an overall test accuracy of 33.958%.
 
 ### Examples
 Examples - images/text/live demo, anything to show off your work (note, demos get some extra credit in the rubric)
+- [Presentation Slides](https://docs.google.com/presentation/d/1K6__rhH25OgbwqZvlMlfX75R-YHsyYvxKiPKS7OOMAI/edit?usp=sharing)
+- [Dataset Downloader](https://colab.research.google.com/drive/1CjkhO3SELTK_KpOblS4pAcoaqMuzP1gC?usp=sharing)
+- [Project Notebook](https://colab.research.google.com/drive/1E1GKQjZ1hweY2ZTR4AzIuwKaTHbdjhCD?usp=sharing)
+
+Here are 5 random predictions for the model:
+
