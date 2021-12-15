@@ -35,6 +35,7 @@ Experiments/evaluation - how are you evaluating your results
 I split the dataset into training (60%), validation (20%), and test (20%) to run experiments. I chose the best performing architecture on the validation set, ran hyperparameter search, and then trained a final model on the training + validation sets and test it on the test set.
 
 *Only images*:
+
 | Model Name | Training Accuracy | Validation Accuracy |
 |-------|--------|---------|
 | Simple Convolution | 21.98% | 22.56% |
@@ -43,7 +44,8 @@ I split the dataset into training (60%), validation (20%), and test (20%) to run
 
 Here, full convolution layer includes dropout, maxpool, and batch norm. Although 2 Full Convolution layers performed better, the difference with 1 full convolution layer was negligible and it took WAY more time to run.
 
-*Only text*
+*Only text*:
+
 | Model Name | Training Accuracy | Validation Accuracy |
 |-------|--------|---------|
 | RNN | 14.28% | 15.17% |
@@ -57,8 +59,6 @@ I ended up combining 1 Full Convolution Layer (good performance + speed) with BE
 
 ### Results
 Combining these resulted in a model that I ran hyperparameter searh over. The best search netted the following:
-
-'lr': , 'momentum': , 'weight_decay': , 'step_size': 13, 'M': 70, 'k': 7, 'N': 14}
 
 | Parameter | Value |
 |-------|--------|
